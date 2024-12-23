@@ -94,3 +94,16 @@ json
 Response
 >* Status Code: 201 Created
 >* Body: 생성된 게시글의 ID 및 정보
+
+# 2. 게시글 조회 (Get Post)
+## Method: GET
+### URL: /api/board/{boardId}/post/{postId}
+
+Path Parameter:
+> * boardId: 게시글이 속한 게시판 ID
+> * postId: 게시글 ID
+
+Response
+>Status Code: 200 OK
+> 
+>Body: 요청된 게시글의 상세 정보
