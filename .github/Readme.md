@@ -107,3 +107,31 @@ Response
 >Status Code: 200 OK
 > 
 >Body: 요청된 게시글의 상세 정보
+
+# 3.게시글 목록 조회 (List Posts)
+## Method: GET
+### URL: /api/board/{boardId}/posts
+
+Path Parameter:
+>boardId: 게시글 목록을 조회할 게시판 ID
+
+Query Parameters:
+>* page: 페이지 번호 (기본값 0)
+>* size: 페이지 크기 (기본값 10)
+>* sort: 정렬 기준 (예: createdAt,desc)
+
+Response
+>* Status Code: 200 OK
+>* Body: 게시글 목록 및 페이징 정보
+
+# 4. 게시글 수정 (Update Post)
+## Method: PUT
+### URL: /api/board/{boardId}/post/{postId}
+
+Path Parameter:
+>* boardId: 게시글이 속한 게시판 ID
+>* postId: 수정할 게시글 ID
+
+Body:
+>* title (String): 수정된 게시글 제목
+>* content (String, Optional
